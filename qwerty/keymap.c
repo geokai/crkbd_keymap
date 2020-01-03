@@ -92,6 +92,7 @@ enum macro_keycodes {
 #define KC_LVAD   RGB_VAD
 #define KC_ARROW  TG(_ARROWS)
 #define KC_LPLN   RGB_MODE_PLAIN
+#define KC_INSERT INSERT
 /* Arrows */
 #define KC_QWERTY TO(_QWERTY)
 
@@ -116,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
       _____,  LOCK,  SLCK,  PAUS,MISNCT,APPWIN,                 GUILFT,GUIDWN, GUIUP,GUIRGT, _____, _____,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  _____, _____, _____,      DEL, _____, _____ \
+                                  _____, _____, _____,   _____, _____, _____ \
                               //`--------------------'  `--------------------'
   ),
 
@@ -126,9 +127,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
      CTLGRV,     1,     2,     3,     4,     5,                      6,     7,     8,     9,     0,CTLDOT,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      _____, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                 ALTLFT,ALTDWN, ALTUP,ALTRGT, _____, _____,\
+      _____, XXXXX, XXXXX, XXXXX, XXXXX,   BSP,                 ALTLFT,ALTDWN, ALTUP,ALTRGT, _____, _____,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  _____, _____, _____,    _____, _____, _____ \
+                                  _____, _____,   DEL,    _____, _____, _____ \
                               //`--------------------'  `--------------------'
   ),
 
@@ -138,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
      CTLESC, XXXXX, HYPRS, HYPRD, FORCQ,   RST,                   LMOD,  LHUI,  LSAI,  LVAI, ARROW,  RCTL,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      _____, XXXXX, HYPRX, HYPRC, XXXXX,  LRST,                  LRMOD,  LHUD,  LSAD,  LVAD,  LPLN,  CAPS,\
+      _____, XXXXX, HYPRX, HYPRC,INSERT,  LRST,                  LRMOD,  LHUD,  LSAD,  LVAD,  LPLN,  CAPS,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                   _____, XXXXX, _____,     LTOG, RASLK, _____ \
                               //`--------------------'  `--------------------'

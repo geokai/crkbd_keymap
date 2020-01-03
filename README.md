@@ -1,1 +1,1 @@
-## Keymap for the corne (crkbd) keyboard
+## Keymaps for the corne (crkbd) keyboard
