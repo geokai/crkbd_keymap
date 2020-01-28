@@ -96,7 +96,7 @@ enum macro_keycodes {
 #define KC_QWERTY TO(_QWERTY)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_QWERTY] = LAYOUT_kc( \
+  [_COLEMAK] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
         TAB,     Q,     W,     F,     P,     G,                      J,     L,     U,     Y,CTLQUT,  BSLS,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
