@@ -75,6 +75,7 @@ enum macro_keycodes {
 #define KC_ALTDWN LALT(KC_DOWN)
 #define KC_ALTUP  LALT(KC_UP)
 #define KC_ALTRGT LALT(KC_RGHT)
+#define KC_INSERT KC_INS
 /* Function Layer */
 #define KC_HYPRS  HYPR(KC_S)
 #define KC_HYPRX  HYPR(KC_X)
@@ -95,6 +96,7 @@ enum macro_keycodes {
 #define KC_LVAD   RGB_VAD
 #define KC_ARROW  TG(_ARROWS)
 #define KC_LPLN   RGB_MODE_PLAIN
+#define KC_PRTSC  KC_PSCREEN
 /* Arrows */
 #define KC_QWERTY TO(_QWERTY)
 #define KC_COLEMAK TO(_COLEMAK)
@@ -114,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_COLEMAK] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-        TAB,     Q,     W,     F,     P,     G,                      J,     L,     U,     Y,CTLQUT,  BSLS,\
+        TAB,     Q,     W,     F,     P,     G,                      J,     L,     U,     Y,  SCLN,  BSLS,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
      CTLESC,     A,     R,     S,     T,     D,                      H,     N,     E,     I,     O,CTLQUT,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
@@ -126,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-     GRV,  MUTE,  VOLD,  VOLU,  TABP,  TABN,                    PND,  LCBR,  RCBR,  LBRC,  RBRC,  PLUS,\
+       TILD,  MUTE,  VOLD,  VOLU,  TABP,  TABN,                    PND,  LCBR,  RCBR,  LBRC,  RBRC,  PLUS,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
       _____,  MRWD,  MPLY,  MFFD,  DSKP,  DSKN,                   LEFT,  DOWN,    UP, RIGHT,  UNDS,CTLMIN,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
@@ -138,22 +140,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-       TILD,  EXLM,    AT,  HASH,   DLR,  PERC,                   CIRC,  AMPR,  ASTR,  LPRN,  RPRN,   EQL,\
+        GRV,  EXLM,    AT,  HASH,   DLR,  PERC,                   CIRC,  AMPR,  ASTR,  LPRN,  RPRN,   EQL,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
      CTLGRV,     1,     2,     3,     4,     5,                      6,     7,     8,     9,     0,CTLDOT,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      _____, XXXXX, XXXXX, XXXXX, XXXXX,   BSP,                 ALTLFT,ALTDWN, ALTUP,ALTRGT, _____, _____,\
+      _____, XXXXX, XXXXX, XXXXX, XXXXX,INSERT,                 ALTLFT,ALTDWN, ALTUP,ALTRGT, _____, _____,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                   _____, _____, _____,    _____, _____, _____ \
                               //`--------------------'  `--------------------'),
+  ),
 
   [_FUNCTION] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
          F1,    F2,    F3,    F4,    F5,    F6,                     F7,    F8,    F9,   F10,   F11,   F12,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-     CTLESC, COL, HYPRS, HYPRD, FORCQ,   RST,                   LMOD,  LHUI,  LSAI,  LVAI, ARROW,  RCTL,\
+     CTLESC,   COL, HYPRS, HYPRD, FORCQ,   RST,                   LMOD,  LHUI,  LSAI,  LVAI, ARROW,  RCTL,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      _____, QWT, HYPRX, HYPRC, XXXXX,  LRST,                  LRMOD,  LHUD,  LSAD,  LVAD,  LPLN,  CAPS,\
+      _____,   QWT, HYPRX, HYPRC, PRTSC,  LRST,                  LRMOD,  LHUD,  LSAD,  LVAD,  LPLN,  CAPS,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                   _____, XXXXX, _____,     LTOG, RASLK, _____ \
                               //`--------------------'  `--------------------'
